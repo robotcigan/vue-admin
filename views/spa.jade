@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  .container
+    #app
+      admin-nav
+      router-view
+      //- form(action="/save_post" method="post")
+      //-   .form-group
+      //-     label Название
+      //-     input.form-control(type="text" name="title")
+      //-   .form-group
+      //-     label Топик
+      //-     select.form-control(type="text" name="topic")
+      //-       each topic in topics
+      //-         option #{topic.title}
+      //-   .form-group
+      //-     label Текст
+      //-     textarea.form-control(name="content")
+      //-   input(type="submit" value="Сохранить").btn.btn-success
+      //- each post in posts
+      //-   table.table
+      //-     tbody
+      //-       tr
+      //-         td
+      //-           a(href="post/#{post._id}" role="button")= post.title
+      //-           a(href="/edit_post/#{post._id}" role="button").btn.btn-warning Редактировать
+      //-           a(href="/delete_post/#{post._id}" role="button").btn.btn-danger Удалить

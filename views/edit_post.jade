@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.container
+		h2 Редактирование поста
+		form(action="/update_post" method="post")
+			input.hiden(type="text" name="id" style="display: none" value="#{post._id}")
+			.form-group
+				label Название
+				input.form-control(type="text" name="title" value="#{post.title}")
+			.form-group
+				label Топик
+				input.form-control(type="text" name="topic" value="#{post.topic}")
+			.form-group
+				label Текст
+				textarea.form-control(name="content") #{post.content}
+			input(type="submit" value="Сохранить").btn.btn-success

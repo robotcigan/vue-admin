@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    title= title
+    //- link(rel='stylesheet', href='/css/base.css')
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+  body
+    nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        a.navbar-brand(href='/posts') Блог
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='/posts')
+                | Статьи 
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/admin') Админка
+          form.form-inline.my-2.my-lg-0
+            input.form-control.mr-sm-2(type='text', placeholder='Search')
+            button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+    block content
+
+
+    script(src="js/vue.min.js")
+    script(src="js/vue-router.min.js")
+    script(src="js/vue-resource.min.js")
+    script(src="js/main.js")

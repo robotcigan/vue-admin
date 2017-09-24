@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	.container
+		each post in posts
+			section.post
+				h3= post.title
+				a(href="/topics/#{post.topic}")
+					span.badge.badge-primary #{post.topic}
+				p= post.content
+				a.btn.btn-primary(href="/post/#{post._id}") Подробнее
